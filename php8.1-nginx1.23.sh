@@ -24,6 +24,3 @@ touch info.php && echo '<?php phpinfo(); ?>' > info.php && mv info.php /usr/shar
 service php$PHP_VERSION-fpm start && nginx -s reload
 php -v
 echo "---------- PHP INSTALL FINISH ----------"
-
-
-
