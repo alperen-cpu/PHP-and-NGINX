@@ -1,7 +1,7 @@
 clear
 PHP_VERSION=8.1
 apt update -y
-apt install curl gnupg2 ca-certificates lsb-release
+apt install curl gnupg2 ca-certificates lsb-release -y
 echo "---------- NGINX INSTALL ----------"
 echo "deb http://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" \
     | tee /etc/apt/sources.list.d/nginx.list
