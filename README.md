@@ -1,0 +1,3 @@
+# PHP-and-NGINX
+PHP 8.1 and NGINX 1.23 INSTALL SHELL SCRIPT
+Debian 11 Bullseye
