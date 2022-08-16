@@ -20,7 +20,9 @@ apt update -y
 apt-get install php$PHP_VERSION php$PHP_VERSION-fpm -y
 sed -i 's/memory_limit = 128M/memory_limit = 1G/' /etc/php/$PHP_VERSION/fpm/php.ini
 sed -i 's/max_execution_time = 30/max_execution_time = 60/' /etc/php/$PHP_VERSION/cli/php.ini
-touch info.php && echo '<?php phpinfo(); ?>' > info.php && mv info.php /usr/share/nginx/html/
+touch phpinfo.php && echo '<?php phpinfo(); ?>' > phpinfo.php && mv phpinfo.php /usr/share/nginx/html/
+sed -i 's/listen.owner \= www-data/listen.owner \= nginx/g' /etc/php/8.1/fpm/pool.d/www.conf
+sed -i 's/listen.group \= www-data/listen.group \= nginx/g' /etc/php/8.1/fpm/pool.d/www.conf
 service php$PHP_VERSION-fpm start && nginx -s reload
 php -v
 echo "---------- PHP INSTALL FINISH ----------"
