@@ -1,3 +1,6 @@
+#!/bin/bash
+# Author: Alperen Sah
+#Date 17.08.2022
 clear
 PHP_VERSION=8.1
 apt update -y
