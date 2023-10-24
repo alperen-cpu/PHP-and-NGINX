@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  nginx-php-mariadb:
+    image: nginx-php8.1-mariadb
+    ports:
+      - "8081:8081" 
+    volumes:
+      - mariadb-data:/var/lib/mysql
+      - web-data:/usr/share/nginx/html
+volumes:
+  mariadb-data:
+  web-data:
